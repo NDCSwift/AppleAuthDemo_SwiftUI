@@ -1,54 +1,31 @@
-# 🚀 Getting Started
+# 🍎 Sign in with Apple — SwiftUI Demo
 
-## 1. Clone the Repo
+A minimal SwiftUI sample that demonstrates "Sign in with Apple" using `AuthenticationServices` with a polished UI and inline documentation.
 
-```bash
-git clone https://github.com/NDCSwift/REPO-NAME.git
-cd REPO-NAME
-```
+---
 
-Or select “Clone Git Repository…” when Xcode launches.
+## 🤔 What this is
 
-⸻
+This project shows the complete Sign in with Apple flow in SwiftUI — from requesting scopes and handling the first-time credential response, to checking credential state on subsequent launches and handling revocation. Every decision is documented inline so you understand *why*, not just *what*.
 
-## 2. Open in Xcode
+## ✅ Why you'd use it
 
-    •	Double-click the .xcodeproj or .xcworkspace.
+- **Full auth lifecycle covered** — first sign-in, returning user, credential state check, and revocation handling
+- **Privacy-aware patterns** — explains why Apple only returns email/name on the *first* sign-in and what to do about it
+- **SwiftUI-native** — uses `SignInWithAppleButton` with a gradient background and card-style layout, no UIKit bridging
+- **`UserDefaults` demo persistence** — shows where and why to persist the user ID (and what to use in production instead)
 
-⸻
+## 📺 From the NoahDoesCoding YouTube Channel
 
-## 3. Set Your Development Team
+This project is a companion to a tutorial on [@NoahDoesCoding97](https://www.youtube.com/@NoahDoesCoding97). Subscribe for weekly SwiftUI tutorials.
 
-In Xcode, navigate to:
-
-TARGET → Signing & Capabilities → Team
-• Select your personal or organizational team.
-
-⸻
-
-## 4. Update the Bundle Identifier
-
-    •	Change com.example.MyApp to a unique identifier (e.g., com.yourname.MyApp).
-
-⸻
-
-🛠️ Notes
-
-    •	If you see a code signing error, check that Team and Bundle ID are set.
-    •	If building for a device, ensure your provisioning profile supports the required capabilities (Push, iCloud, etc.).
-
-📺 YouTube
-[Click here to check out the guide on YouTube](https://www.youtube.com/@NoahDoesCoding97)
-
-# AppleAuthDemo_SwiftUI
-
-A minimal SwiftUI sample that demonstrates “Sign in with Apple” using AuthenticationServices with a polished UI and inline documentation.
+---
 
 ## Prerequisites
 
-- Xcode 15 or later (project created/tested with recent Xcode versions)
+- Xcode 15 or later
 - iOS 17+ target recommended
-- An Apple Developer Program membership (paid) to enable Sign in with Apple and run on device
+- An Apple Developer Program membership to enable Sign in with Apple and run on device
 
 ## Project Highlights
 
@@ -59,18 +36,43 @@ A minimal SwiftUI sample that demonstrates “Sign in with Apple” using Authen
   - Credential state checks and revocation handling
   - Where/why values are persisted (UserDefaults for demo)
 
-## Getting Started
+## 🚀 Getting Started
 
-1. Open the project in Xcode.
-2. Select the app target > Signing & Capabilities.
-3. Add the capability: “Sign in with Apple”.
-4. Ensure a valid Team is selected and automatic signing is enabled.
-5. Build and run on a device or simulator (note that some flows require a real device signed into an Apple ID).
-
-## How Sign in with Apple works in this demo
-
-- The sign-in button configures the request with the following scopes:
-
-```swift
-request.requestedScopes = [.fullName, .email]
+### 1. Clone the Repo
+```bash
+git clone https://github.com/NDCSwift/AppleAuthDemo_SwiftUI.git
+cd AppleAuthDemo_SwiftUI
 ```
+Or select "Clone Git Repository…" when Xcode launches.
+
+### 2. Open in Xcode
+- Double-click the `.xcodeproj` or `.xcworkspace`.
+
+### 3. Add the Capability
+Go to **Target → Signing & Capabilities** and add **Sign in with Apple**.
+
+### 4. Set Your Development Team
+
+In Xcode, navigate to: **TARGET → Signing & Capabilities → Team**
+- Select your personal or organizational team.
+
+### 5. Update the Bundle Identifier
+- Change `com.example.MyApp` to a unique identifier.
+
+### 6. Run
+Some flows require a real device signed into an Apple ID. iOS 17+ recommended.
+
+---
+
+## 🛠️ Notes
+
+- If you see a code signing error, check that Team and Bundle ID are set
+- Requires an Apple Developer Program membership to enable Sign in with Apple on device
+- Building for a device requires your provisioning profile to include the Sign in with Apple capability
+
+## 📦 Requirements
+
+- Xcode 15+
+- iOS 17+
+
+📺 [Watch the guide on YouTube](https://www.youtube.com/@NoahDoesCoding97)
