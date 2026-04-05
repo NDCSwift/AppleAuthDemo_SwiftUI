@@ -15,9 +15,11 @@ This project shows the complete Sign in with Apple flow in SwiftUI — from requ
 - **SwiftUI-native** — uses `SignInWithAppleButton` with a gradient background and card-style layout, no UIKit bridging
 - **`UserDefaults` demo persistence** — shows where and why to persist the user ID (and what to use in production instead)
 
-## 📺 From the NoahDoesCoding YouTube Channel
+## 📺 Watch on YouTube
 
-This project is a companion to a tutorial on [@NoahDoesCoding97](https://www.youtube.com/@NoahDoesCoding97). Subscribe for weekly SwiftUI tutorials.
+[![Watch on YouTube](https://img.shields.io/badge/YouTube-Watch%20the%20Tutorial-red?style=for-the-badge&logo=youtube)](https://youtu.be/8nox8nPlq2U)
+
+> This project was built for the [NoahDoesCoding YouTube channel](https://www.youtube.com/@NoahDoesCoding97). Subscribe for weekly SwiftUI tutorials.
 
 ---
 
@@ -75,4 +77,4 @@ Some flows require a real device signed into an Apple ID. iOS 17+ recommended.
 - Xcode 15+
 - iOS 17+
 
-📺 [Watch the guide on YouTube](https://www.youtube.com/@NoahDoesCoding97)
+📺 [Watch the guide on YouTube](https://youtu.be/8nox8nPlq2U)
